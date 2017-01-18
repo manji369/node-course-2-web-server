@@ -39,7 +39,6 @@ app.get('/', (req, res) => {
   // res.send('<h1>Hello Express!</h1>');
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    currentYear: new Date().getFullYear(),
     welcomeMessage: 'Welcome to my website'
   });
 });
@@ -47,6 +46,13 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    welcomeMessage: 'My porfolio page'
   });
 });
 
